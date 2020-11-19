@@ -1,0 +1,83 @@
+<!DOCTYPE html>  <!-- HTML 5 -->
+
+<html lang="en-us"> <!-- Для Русскоязычного контента: lang="ru-RU" -->
+    
+    <head>
+        <meta charset="UTF-8"> <!-- Кодировка -->
+    
+        <title>First task - the Solar System</title>
+        <meta name="description" content="I take this task at first from EPAM">
+	
+        <link rel="shortcut icon" href="favicon.png" type="image/png"> <!-- Иконка -->
+        <link href="./css/style.css" rel="stylesheet" type="text/css"> <!-- Стили -->
+    
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"> <!-- Масштабирование для работы с адаптивной версткой -->
+    </head>
+
+    <body>
+
+        <!-- Шапка сайта -->
+        <header>
+            <div class="container"> <span>solar</span> <img id="logo" src="./img/logo.png"> <span>system</span> </div>
+        </header>
+
+        <div class="container">
+
+            <!-- Основной блок с контентом -->
+            <main>
+
+                <h1>About author of the site</h1>
+                <div class="about">
+                    <span class="item">Name: </span>Marsel Mirhe<br>
+                    <span class="item">Location: </span>Belarus, Gomel<br>
+                    <span class="item">Tel: </span>+375 25 528 21 39<br>
+                    <span class="item">Email: </span>chelovek-gorod@yandex.by<br>
+                </div>
+                <img class="righ-img" src="./img/marsel.jpg" alt="8 planets of the solar system">
+                
+                <h3>Write to the author</h3>
+                <form>
+                    <label for="email">Your e-mail: </label><input type="email" id="email" onblur="endInput(this.value, this.id)"><br><br>
+                    <label for="message">Your message:</label><textarea rows="4" cols="43" id="message" onblur="endInput(this.value, this.id)"></textarea><br>
+                    <input type="reset" value="Clear"> <input type="button" value="Send" onclick="clickSend(this.form);" id="formSend">
+                </form>
+
+                <div class="source">Source:  <a href="https://en.wikipedia.org/wiki/Solar_System" target="_blank">Wikipedia | Solar System</a></div>
+
+                <br>
+                <h2>External links</h2>
+                <ul>
+                    <li><a href="https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Solar_System" target="_blank">"Solar System" . Encyclopedia Britannica. 25 (11th ed.). 1911. pp. 157–158.</a></li>
+                    <li><a href="https://web.archive.org/web/20140426232154/http://logic-law.com/index.php?title=A_Cosmic_History_of_Human_Evolution#Development_of_the_Solar_System" target="_blank">"A Cosmic History of the Solar System.</a></li>
+                    <li><a href="https://joshworth.com/a-tediously-accurate-map-of-the-solar-system/" target="_blank">"A Tediously Accurate Map of the Solar System (web based scroll map scaled to the Moon being 1 pixel).</a></li>
+                    <li><a href="https://solarsystem.nasa.gov/" target="_blank">"NASA's Solar System Exploration.</a></li>
+                    <li><a href="https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/" target="_blank">"NASA's Solar System Profile.</a></li>
+                    <li><a href="https://space.jpl.nasa.gov/" target="_blank">"NASA's Solar System Simulator.</a></li>
+                    <li><a href="https://eyes.nasa.gov/apps/orrery/#/home" target="_blank">"NASA Eyes-on-the-Solar-System.</a></li>
+                    <li><a href="https://solarsystem.nasa.gov/" target="_blank">"NASA/JPL Solar System main page.</a></li>
+                </ul>
+
+            </main>
+
+            <!-- Навигационное меню -->
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="history.html">History</a>
+                <a href="table.html">Table</a>
+                <a  href="about.html" class="selected">About</a>
+            </nav>
+
+        </div>
+
+        <!-- Подвал -->
+        <footer>
+            <div class="container">
+                <span id="divVsite"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey">Developer:</span> Marsel Mirge <span id="divDate"></span>
+            </div>
+        </footer>
+
+        <!-- Подключение js после всего контента -->
+        <script src="./js/main.js"></script>
+
+    </body>
+</html>
