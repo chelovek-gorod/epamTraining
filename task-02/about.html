@@ -14,11 +14,13 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"> <!-- Масштабирование для работы с адаптивной версткой -->
     </head>
 
-    <body>
+    <body vocab="https://schema.org/" typeof="ScholarlyArticle" resource="#article">
+        <!-- (vocab="https://schema.org/") - ссылка на словарь ключей для разметки контента; (typeof="Article") - тип контента - статья. -->
 
         <!-- Шапка сайта -->
         <header>
-            <div class="container"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+            <div class="container" property="name"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+            <!-- (property="name") - указываем что тэг содержит заголовок -->
             <!-- класс (u- *) - указывает на наличие ссылки; (u-photo) - ссылка на изображение-->
         </header>
 
@@ -30,7 +32,8 @@
                     <!-- класс (vcard) - указывает на блок с информацией о объекте (авторе/ организации и прочие): Название/имя, адрес, почта и пр.-->
                     <h1 class="p-name">About author of the site</h1>
                     <div class="about">
-                        <span class="item">Name: </span class="fn">Marsel Mirhe<br> <!-- класс (fn) - указывает на то, что тег содержит имя-->
+                        <span class="item">Name: </span class="fn" property="editor">Marsel Mirhe<br> <!-- класс (fn) - указывает на то, что тег содержит имя-->
+                                                            <!-- (property="editor") - содерижит имя человека, редактирующего статью -->
                         <span class="item">Location: </span class="locality">Belarus, Gomel<br> <!-- класс (locality) - указывает на локацию-->
                         <span class="item">Tel: </span class="tel">+375 25 528 21 39<br> <!-- класс (tel) - указывает на то, что содержит телефон-->
                         <span class="item">Email: </span class="email">chelovek-gorod@yandex.by<br> <!-- класс (email) - указывает на то, что содержит email-->
@@ -49,21 +52,25 @@
                     <!-- класс (cm-submit) - указывает на то, что данный элемент формы производит отправку введенных в нее данных-->
                 </form>
 
-                <div class="source">Source:  <a class="u-url" href="https://en.wikipedia.org/wiki/Solar_System" target="_blank">Wikipedia | Solar System</a></div>
+                <section>
+                    <div class="source">Source:  <a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://en.wikipedia.org/wiki/Solar_System" target="_blank">
+                    <!-- (property="isBasedOn") - на чем основано содержание сайта, (typeof = "WebSite") - тип источника - сайт -->
+                        Wikipedia | Solar System</a></div>
 
-                <br>
-                <h2 class="p-name">External links</h2>
-                <ul>
-                    <li><a class="u-url" href="https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Solar_System" target="_blank">"Solar System" . Encyclopedia Britannica. 25 (11th ed.). 1911. pp. 157–158.</a></li>
-                    <li><a class="u-url" href="https://web.archive.org/web/20140426232154/http://logic-law.com/index.php?title=A_Cosmic_History_of_Human_Evolution#Development_of_the_Solar_System" target="_blank">"A Cosmic History of the Solar System.</a></li>
-                    <li><a class="u-url" href="https://joshworth.com/a-tediously-accurate-map-of-the-solar-system/" target="_blank">"A Tediously Accurate Map of the Solar System (web based scroll map scaled to the Moon being 1 pixel).</a></li>
-                    <li><a class="u-url" href="https://solarsystem.nasa.gov/" target="_blank">"NASA's Solar System Exploration.</a></li>
-                    <li><a class="u-url" href="https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/" target="_blank">"NASA's Solar System Profile.</a></li>
-                    <li><a class="u-url" href="https://space.jpl.nasa.gov/" target="_blank">"NASA's Solar System Simulator.</a></li>
-                    <li><a class="u-url" href="https://eyes.nasa.gov/apps/orrery/#/home" target="_blank">"NASA Eyes-on-the-Solar-System.</a></li>
-                    <li><a class="u-url" href="https://solarsystem.nasa.gov/" target="_blank">"NASA/JPL Solar System main page.</a></li>
-                    <!-- класс (u-url) - указывает на то, что данный тег содержит ссылку на какой либо ресурс или сайт-->
-                </ul>
+                    <br>
+                    <h2 class="p-name">External links</h2>
+                    <ul>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Solar_System" target="_blank">"Solar System" . Encyclopedia Britannica. 25 (11th ed.). 1911. pp. 157–158.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://web.archive.org/web/20140426232154/http://logic-law.com/index.php?title=A_Cosmic_History_of_Human_Evolution#Development_of_the_Solar_System" target="_blank">"A Cosmic History of the Solar System.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://joshworth.com/a-tediously-accurate-map-of-the-solar-system/" target="_blank">"A Tediously Accurate Map of the Solar System (web based scroll map scaled to the Moon being 1 pixel).</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://solarsystem.nasa.gov/" target="_blank">"NASA's Solar System Exploration.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/" target="_blank">"NASA's Solar System Profile.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://space.jpl.nasa.gov/" target="_blank">"NASA's Solar System Simulator.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://eyes.nasa.gov/apps/orrery/#/home" target="_blank">"NASA Eyes-on-the-Solar-System.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://solarsystem.nasa.gov/" target="_blank">"NASA/JPL Solar System main page.</a></li>
+                        <!-- класс (u-url) - указывает на то, что данный тег содержит ссылку на какой либо ресурс или сайт-->
+                    </ul>
+                </section>
 
             </main>
 
@@ -81,7 +88,12 @@
         <!-- Подвал -->
         <footer>
             <div class="container">
-                <span id="divVsite"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey">Developer:</span> Marsel Mirge <time id="divDate" datetime=""></time>
+                <span id="divVsite" property="version"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- (property="version") - содерижит версию статьи/сайта -->
+                <span class="grey">Developer:</span> <span property="editor">Marsel Mirge</span>
+                <!-- (property="editor") - содерижит имя человека, редактирующего статью -->
+                <time id="divDate" datetime=""></time>
+                <!-- атрибут (datetime) - содерижит дату, в формате 2010-04-07T17:00 -->
             </div>
         </footer>
 

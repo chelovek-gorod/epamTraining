@@ -14,23 +14,27 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"> <!-- Масштабирование для работы с адаптивной версткой -->
     </head>
 
-    <body>
+    <body vocab="https://schema.org/" typeof="ScholarlyArticle" resource="#article">
+        <!-- (vocab="https://schema.org/") - ссылка на словарь ключей для разметки контента; (typeof="Article") - тип контента - статья. -->
 
         <!-- Шапка сайта -->
         <header>
-            <div class="container"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+            <div class="container" property="name"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+            <!-- (property="name") - указываем что тэг содержит заголовок -->
             <!-- класс (u- *) - указывает на наличие ссылки; (u-photo) - ссылка на изображение-->
         </header>
 
         <div class="container">
 
             <!-- Основной блок с контентом -->
-            <main class="h-feed">
+            <main class="h-feed" property="articleBody">
             <!-- класс (h- *) - корневой элемент микроразметки (верхний уровень, возможно содержащий вложения)-->
             <!-- (-feed) - открытый формат для публикации основного содержания, ленты сообщений и пр. контента-->
+            <!-- (property="articleBody") - указываем что тэг содержит статью -->
 
-                <h1 class="p-name">Formation and evolution</h1>
+                <h1 class="p-name" property="headline" contant="Formation and evolution of Solar System">Formation and evolution</h1>
                 <!-- класс (p- *) - для свойств обычного текста; (p-name) - обозначение заголовков -->
+                <!-- (property="headline") - указываем на заголовок статьи, (contant="Formation and evolution of Solar System") - уточняеет заголовок для поискового робота -->
 
                 <div class="e-content">
                 <!-- класс (e- *) - элемент содержащий вложения; (e-content) - основной контент-->
@@ -61,8 +65,8 @@
 
                     <p>
                         Within 50 million years, the pressure and density of hydrogen in the centre of the protostar became great enough for it to begin
-                        thermonuclear fusion.[49] The temperature, reaction rate, pressure, and density increased until hydrostatic equilibrium was achieved:
-                        the thermal pressure equalled the force of gravity. At this point, the Sun became a main-sequence star.[50] The main-sequence phase,
+                        thermonuclear fusion. The temperature, reaction rate, pressure, and density increased until hydrostatic equilibrium was achieved:
+                        the thermal pressure equalled the force of gravity. At this point, the Sun became a main-sequence star. The main-sequence phase,
                         from beginning to end, will last about 10 billion years for the Sun compared to around two billion years for all other phases
                         of the Sun's pre-remnant life combined.[51] Solar wind from the Sun created the heliosphere and swept away the remaining gas
                         and dust from the protoplanetary disc into interstellar space, ending the planetary formation process. The Sun is growing brighter;
@@ -75,11 +79,11 @@
                         the core of the Sun will contract with hydrogen fusion occurring along a shell surrounding the inert helium, and the energy output
                         will be much greater than at present. The outer layers of the Sun will expand to roughly 260 times its current diameter, and the Sun
                         will become a red giant. Because of its vastly increased surface area, the surface of the Sun will be considerably cooler
-                        (2,600 K at its coolest) than it is on the main sequence.[51] The expanding Sun is expected to vaporize Mercury and render
+                        (2,600 K at its coolest) than it is on the main sequence. The expanding Sun is expected to vaporize Mercury and render
                         Earth uninhabitable. Eventually, the core will be hot enough for helium fusion; the Sun will burn helium for a fraction of the time
                         it burned hydrogen in the core. The Sun is not massive enough to commence the fusion of heavier elements, and nuclear reactions
                         in the core will dwindle. Its outer layers will move away into space, leaving a white dwarf, an extraordinarily dense object,
-                        half the original mass of the Sun but only the size of Earth.[53] The ejected outer layers will form what is known as a planetary
+                        half the original mass of the Sun but only the size of Earth. The ejected outer layers will form what is known as a planetary
                         nebula, returning some of the material that formed the Sun—but now enriched with heavier elements like carbon—to the interstellar medium.
                     </p>
                 </div>
@@ -100,7 +104,12 @@
         <!-- Подвал -->
         <footer>
             <div class="container">
-                <span id="divVsite"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey">Developer:</span> Marsel Mirge <time id="divDate" datetime=""></time>
+                <span id="divVsite" property="version"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- (property="version") - содерижит версию статьи/сайта -->
+                <span class="grey">Developer:</span> <span property="editor">Marsel Mirge</span>
+                <!-- (property="editor") - содерижит имя человека, редактирующего статью -->
+                <time id="divDate" datetime=""></time>
+                <!-- атрибут (datetime) - содерижит дату, в формате 2010-04-07T17:00 -->
             </div>
         </footer>
 
