@@ -14,22 +14,27 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"> <!-- Масштабирование для работы с адаптивной версткой -->
     </head>
 
-    <body>
+    <body vocab="https://schema.org/" typeof="ScholarlyArticle" resource="#article">
+        <!-- (vocab="https://schema.org/") - ссылка на словарь ключей для разметки контента; (typeof="Article") - тип контента - статья. -->
 
         <!-- Шапка сайта -->
         <header>
-            <div class="container"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+            <div class="container" property="name"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+            <!-- (property="name") - указываем что тэг содержит заголовок -->
             <!-- класс (u- *) - указывает на наличие ссылки; (u-photo) - ссылка на изображение-->
         </header>
 
-        <div class="container">
+        <div class="container" property="articleBody">
+        <!-- (property="articleBody") - указываем что тэг содержит статью -->
 
             <!-- Основной блок с контентом -->
             <main class="h-feed">
             <!-- класс (h- *) - корневой элемент микроразметки (верхний уровень, возможно содержащий вложения)-->
             <!-- (-feed) - открытый формат для публикации основного содержания, ленты сообщений и пр. контента-->
-                <h1 class="p-name">The Solar System</h1>
+                <h1 class="p-name" property="headline">The Solar System</h1>
                 <!-- класс (p- *) - для свойств обычного текста; (p-name) - обозначение заголовков -->
+                <!-- (property="headline") - содержит заголовок статьи -->
+
                 <!-- (p-summary) - вводная информация-->
                 <p  class="p-summary">
                     The Solar System is the gravitationally bound system of the Sun and the objects that orbit it, either directly or indirectly.
@@ -51,8 +56,9 @@
                         <li>Uranus</li>
                         <li>Neptune</li>
                     </ol>
-                    <img class="u-photo righ-img" src="./img/planets.jpg" alt="8 planets of the solar system">
+                    <img class="u-photo righ-img" property="image" src="./img/planets.jpg" alt="8 planets of the solar system">
                     <!-- класс (u- *) - указывает на наличие ссылки; (u-photo) - ссылка на изображение-->
+                    <!-- (property="image") - указывает на тематическое изображение-->
                     <p>
                         The Solar System formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud.
                         The four smaller inner planets, <b>Mercury</b>, <b>Venus</b>, <b>Earth</b> and <b>Mars</b>, are terrestrial planets, being primarily
@@ -64,7 +70,7 @@
                     </p>
 
                     <h2 class="p-name">Small objects of the solar system</h2>
-                    <img class="u-photo left-img" src="./img/smallobj.jpg" alt="Small solar system objects">
+                    <img class="u-photo left-img" property="image" src="./img/smallobj.jpg" alt="Small solar system objects">
                     <p>
                         The Solar System also contains smaller objects. The asteroid belt, which lies between the orbits of Mars and Jupiter, mostly contains
                         objects composed, like the terrestrial planets, of rock and metal. Beyond Neptune's orbit lie the Kuiper belt and scattered disc,
@@ -79,7 +85,7 @@
                     </p>
 
                     <h2 class="p-name">Some facts about Solar system</h2>
-                    <img class="u-photo righ-img" src="./img/suningalaxy.jpg" alt="Solar system in Milky Way galaxy">
+                    <img class="u-photo righ-img" property="image" src="./img/suningalaxy.jpg" alt="Solar system in Milky Way galaxy">
                     <p>
                         The solar wind, a stream of charged particles flowing outwards from the Sun, creates a bubble-like region in the interstellar
                         medium known as the heliosphere. The heliopause is the point at which pressure from the solar wind is equal to the opposing
@@ -105,7 +111,11 @@
         <!-- Подвал -->
         <footer>
             <div class="container">
-                <span id="divVsite"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey">Developer:</span> Marsel Mirge <time id="divDate" datetime=""></time>
+                <span id="divVsite" property="version"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- (property="version") - содерижит версию статьи/сайта -->
+                <span class="grey">Developer:</span> <span property="editor">Marsel Mirge</span>
+                <!-- (property="editor") - содерижит имя человека, редактирующего статью -->
+                <time id="divDate" datetime=""></time>
                 <!-- атрибут (datetime) - содерижит дату, в формате 2010-04-07T17:00 -->
             </div>
         </footer>

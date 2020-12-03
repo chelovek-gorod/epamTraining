@@ -14,23 +14,27 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"> <!-- Масштабирование для работы с адаптивной версткой -->
     </head>
 
-    <body>
+    <body vocab="https://schema.org/" typeof="ScholarlyArticle" resource="#article">
+        <!-- (vocab="https://schema.org/") - ссылка на словарь ключей для разметки контента; (typeof="Article") - тип контента - статья. -->
 
         <!-- Шапка сайта -->
         <header>
-            <div class="container"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+            <div class="container" property="name"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+            <!-- (property="name") - указываем что тэг содержит заголовок -->
             <!-- класс (u- *) - указывает на наличие ссылки; (u-photo) - ссылка на изображение-->
         </header>
 
         <div class="container">
 
             <!-- Основной блок с контентом -->
-            <main class="h-feed">
+            <main class="h-feed" property="articleBody">
             <!-- класс (h- *) - корневой элемент микроразметки (верхний уровень, возможно содержащий вложения)-->
             <!-- (-feed) - открытый формат для публикации основного содержания, ленты сообщений и пр. контента-->
+            <!-- (property="articleBody") - указываем что тэг содержит статью -->
 
-                <h1 class="p-name">Planets of the Solar System</h1>
+                <h1 class="p-name" property="headline">Planets of the Solar System</h1>
                 <!-- класс (p- *) - для свойств обычного текста; (p-name) - обозначение заголовков -->
+                <!-- (property="headline") - указываем на заголовок статьи -->
 
                 <table>
                     <thead>
@@ -102,27 +106,29 @@
                     </tbody>
                 </table>
 
-                <div class="source">
-                    <h3 class="p-name">Select table style</h3>
+                <section>
+                    <div class="source">
+                        <h3 class="p-name">Select table style</h3>
 
-                    <label for="colorWell">Border color:</label>
-                    <input class="changeColor" type="color" value="#4294f7" id="colorTBorder" onblur="changeTBC(this.value);">
-                    &nbsp;&nbsp;
-                    <label for="colorWell">Header color:</label>
-                    <input class="changeColor" type="color" value="#690c00" id="colorTHeader" onblur="changeTHC(this.value);">
-                    &nbsp;&nbsp;
-                    <label for="borderSize">Border weight:</label>
-                    <input type="range" value="2" id="borderSize" min="1" max="4" step="1" onchange="changeTBS(this.value);">
-                </div>
-                <br><br>
-                <div class="source">
-                    <label for="tableOptions">Table Options:</label>
-                    <select id="tableOptions" onchange="changeTOS(this.value);">
-                        <option value="0">White & Light</option>
-                        <option selected value="1">Blue & Red</option>
-                        <option value="2">Silver & Gold</option>
-                    </select>
-                </div>
+                        <label for="colorWell">Border color:</label>
+                        <input class="changeColor" type="color" value="#4294f7" id="colorTBorder" onblur="changeTBC(this.value);">
+                        &nbsp;&nbsp;
+                        <label for="colorWell">Header color:</label>
+                        <input class="changeColor" type="color" value="#690c00" id="colorTHeader" onblur="changeTHC(this.value);">
+                        &nbsp;&nbsp;
+                        <label for="borderSize">Border weight:</label>
+                        <input type="range" value="2" id="borderSize" min="1" max="4" step="1" onchange="changeTBS(this.value);">
+                    </div>
+                    <br><br>
+                    <div class="source">
+                        <label for="tableOptions">Table Options:</label>
+                        <select id="tableOptions" onchange="changeTOS(this.value);">
+                            <option value="0">White & Light</option>
+                            <option selected value="1">Blue & Red</option>
+                            <option value="2">Silver & Gold</option>
+                        </select>
+                    </div>
+                </section>
 
             </main>
 
@@ -140,7 +146,12 @@
         <!-- Подвал -->
         <footer>
             <div class="container">
-                <span id="divVsite"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey">Developer:</span> Marsel Mirge <time id="divDate" datetime=""></time>
+                <span id="divVsite" property="version"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- (property="version") - содерижит версию статьи/сайта -->
+                <span class="grey">Developer:</span> <span property="editor">Marsel Mirge</span>
+                <!-- (property="editor") - содерижит имя человека, редактирующего статью -->
+                <time id="divDate" datetime=""></time>
+                <!-- атрибут (datetime) - содерижит дату, в формате 2010-04-07T17:00 -->
             </div>
         </footer>
 
