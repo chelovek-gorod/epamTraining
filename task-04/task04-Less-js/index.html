@@ -1,0 +1,149 @@
+<!DOCTYPE html>  <!-- HTML 5 -->
+
+<html lang="en-us"> <!-- lang="ru-RU" for Russian language-->
+    
+    <head>
+        <meta charset="UTF-8">
+    
+        <title>First task - the Solar System</title>
+        <meta name="description" content="I take this task at first from EPAM">
+	
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
+        <!-- Styles -->
+        <link rel="stylesheet/less" type="text/css" href="./css/style.less" />
+        <script src="./less.js/less.js" ></script>
+    
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"> <!-- Scaling for responsive layout -->
+    </head>
+
+    <body vocab="https://schema.org/" typeof="ScholarlyArticle" resource="#article">
+        <!-- (vocab="https://schema.org/") - link to a dictionary of keys for marking up content -->
+
+        <header>
+            <div class="container" property="name"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+            <!-- (property="name") - this tag contains a title -->
+            <!-- class (u- *) - tag contains link; (u-photo) - link to image -->
+        </header>
+
+        <div class="main-wrap" property="articleBody">
+        <!-- (property="articleBody") - this tag contains article -->
+
+            <main class="h-feed">
+            <!-- class (h- *) - root element of microdata (top level, possibly containing attachments)-->
+            <!-- (-feed) - open format for publishing main content, message feed and other content-->
+                <h1 class="p-name" property="headline">The Solar System</h1>
+                <!-- class (p- *) - for text properties; (p-name) - text title -->
+                <!-- (property="headline") - article title -->
+
+                <!-- (p-summary) - introductory information -->
+                <p  class="p-summary">
+                    The Solar System is the gravitationally bound system of the Sun and the objects that orbit it, either directly or indirectly.
+                    Of the objects that orbit the Sun directly, the largest are the eight planets, with the remainder being smaller objects,
+                    the dwarf planets and small Solar System bodies. Of the objects that orbit the Sun indirectly—the moons—two are larger than
+                    the smallest planet, Mercury.
+                </p>
+                
+                <div class="e-content">
+                <!-- class (e- *) - element containing attachments; (e-content) - main contant of attachments -->
+                    <h2 class="p-name">Planets of the solar system</h2>
+                    <ol>
+                        <li>Mercury</li>
+                        <li>Venus</li>
+                        <li>Earth</li>
+                        <li>Mars</li>
+                        <li>Jupiter</li>
+                        <li>Saturn</li>
+                        <li>Uranus</li>
+                        <li>Neptune</li>
+                    </ol>
+                    <img class="u-photo righ-img" property="image" src="./img/planets.jpg" alt="8 planets of the solar system">
+                    <!-- (property="image") - indicates a thematic image-->
+                    <p>
+                        The Solar System formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud.
+                        The four smaller inner planets, <b>Mercury</b>, <b>Venus</b>, <b>Earth</b> and <b>Mars</b>, are terrestrial planets, being primarily
+                        composed of rock and metal. The four outer planets are giant planets, being substantially more massive than the terrestrials.
+                        The two largest planets, <b>Jupiter</b> and <b>Saturn</b>, are gas giants, being composed mainly of hydrogen and helium;
+                        the two outermost planets, <b>Uranus</b> and <b>Neptune </b>, are ice giants, being composed mostly of substances with relatively
+                        high melting points compared with hydrogen and helium, called volatiles, such as water, ammonia and methane.
+                        All eight planets have almost circular orbits that lie within a nearly flat disc called the ecliptic.
+                    </p>
+
+                    <h2 class="p-name">Small objects of the solar system</h2>
+                    <img class="u-photo left-img" property="image" src="./img/smallobj.jpg" alt="Small solar system objects">
+                    <p>
+                        The Solar System also contains smaller objects. The asteroid belt, which lies between the orbits of Mars and Jupiter, mostly contains
+                        objects composed, like the terrestrial planets, of rock and metal. Beyond Neptune's orbit lie the Kuiper belt and scattered disc,
+                        which are populations of trans-Neptunian objects composed mostly of ices, and beyond them a newly discovered population of sednoids.
+                        Within these populations, some objects are large enough to have rounded under their own gravity, though there is considerable debate
+                        as to how many there will prove to be. Such objects are categorized as dwarf planets. The only certain dwarf planet is Pluto,
+                        with another trans-Neptunian object, Eris, expected to be, and the asteroid Ceres at least close to being a dwarf planet.
+                        In addition to these two regions, various other small-body populations, including comets, centaurs and interplanetary dust clouds,
+                        freely travel between regions. Six of the planets, the six largest possible dwarf planets, and many of the smaller bodies are orbited
+                        by natural satellites, usually termed <i>"moons"</i> after the <b>Moon</b>. Each of the outer planets is encircled by planetary rings of dust
+                        and other small objects.
+                    </p>
+
+                    <h2 class="p-name">Some facts about Solar system</h2>
+                    <img class="u-photo righ-img" property="image" src="./img/suningalaxy.jpg" alt="Solar system in Milky Way galaxy">
+                    <p>
+                        The solar wind, a stream of charged particles flowing outwards from the Sun, creates a bubble-like region in the interstellar
+                        medium known as the heliosphere. The heliopause is the point at which pressure from the solar wind is equal to the opposing
+                        pressure of the interstellar medium; it extends out to the edge of the scattered disc. The Oort cloud, which is thought
+                        to be the source for long-period comets, may also exist at a distance roughly a thousand times further than the heliosphere.
+                        The Solar System is located in the Orion Arm, 26,000 light-years from the center of the Milky Way galaxy.
+                    </p>
+                </div>
+
+            </main>
+            
+            <!-- Navigation menu -->
+            <nav >
+                <a href="index.html" class="selected">Home</a>
+                <a href="history.html" >History</a>
+                <a href="table.html"  >Table</a>
+                <a  href="about.html" >About</a>
+                <!-- class (u-url) - this tag contains a link to any resource or web site -->
+            </nav>
+
+            <!-- News panel on the main page -->
+            <aside class="news-bar">
+                <div class="news-bar-header">News feed</div>
+                <div class="news-list">
+                    <a class="news" href="https://www.nasa.gov/feature/goddard/2020/detailing-the-formation-of-distant-solar-systems-with-nasas-webb-telescope" target="_blank">
+                        <span class="news-date">Dec. 16, 2020</span>
+                        <span class="news-title">Detailing the Formation of Distant Solar Systems with NASA's Webb Telescope</span>
+                        <span class="news-description">We live in a mature solar system — eight planets and several dwarf planets (like Pluto)
+                            have formed, the latter within the rock- and ...</span>
+                    </a>
+                    <a class="news" href="https://www.nasa.gov/image-feature/starry-starry-night" target="_blank">
+                        <span class="news-date">Dec. 16, 2020</span>
+                        <span class="news-title">Starry, Starry Night</span>
+                        <span class="news-description">The Hubble Space Telescope captured a crowd of stars that looks rather
+                            like a stadium darkened before a show, lit only ...</span>
+                    </a>
+                    <a class="news" href="https://www.nasa.gov/feature/jpl/3-things-weve-learned-from-nasas-mars-insight" target="_blank">
+                        <span class="news-date">Dec. 16, 2020</span>
+                        <span class="news-title">3 Things We've Learned From NASA's Mars InSight</span>
+                        <span class="news-description">NASA's InSight spacecraft touched down Nov. 26, 2018, on Mars to study
+                            the planet's deep interior. A little more than ...</span>
+                    </a>
+                </div>
+            </aside>
+
+        </div>
+
+        <footer>
+            <div class="container">
+                <span id="divVsite" property="version"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- (property="version") - the version of the article or web site -->
+                <span class="grey">Developer:</span> <span property="editor">Marsel Mirge</span>
+                <!-- (property="editor") - editor name -->
+                <time id="divDate" datetime=""></time>
+                <!-- (datetime) - contains the date in this format: 2010-04-07T17:00 -->
+            </div>
+        </footer>
+
+        <script src="./js/main.js"></script>
+
+    </body>
+</html>
