@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    
+    <head>
+        <meta charset="UTF-8">
+    
+        <title>First task - the Solar System</title>
+        <meta name="description" content="I take this task at first from EPAM">
+	
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+    
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    </head>
+
+    <body vocab="https://schema.org/" typeof="ScholarlyArticle" resource="#article">
+        
+        <header>
+            <div class="container" property="name"> <span>solar</span> <img id="logo" class="u-photo" src="./img/logo.png"> <span>system</span> </div>
+        </header>
+
+        <div class="wrapper">
+
+            <main>
+                <div class="vcard">
+                    <!-- class (vcard) - information about the object (author / organization): Name, address, mail, etc. -->
+                    <h1 class="p-name">About author of the site</h1>
+                    <div class="about">
+                        <span class="item">Name: </span class="fn" property="editor">Marsel Mirhe<br> <!-- (fn) - Full name -->
+                        <span class="item">Location: </span class="locality">Belarus, Gomel<br> <!-- class (locality) - points of the location-->
+                        <span class="item">Tel: </span class="tel">+375 25 528 21 39<br> <!-- class (tel) - contain phone -->
+                        <span class="item">Email: </span class="email">chelovek-gorod@yandex.by<br> <!-- class (email) - contain email-->
+                    </div>
+                    <img class="photo righ-img" src="./img/marsel.jpg" alt="8 planets of the solar system">
+                </div>
+
+                <h3 class="p-name">Write to the author</h3>
+                <form>
+                    <label class="cm-email cm-required" for="email">Your e-mail: </label><input type="email" id="email" onblur="endInput(this.value, this.id)"><br><br>
+                    <!-- class (cm-email) - form field is for entering email -->
+                    <!-- class (cm-required) - required field -->
+                    <label class="cm-required" for="message">Your message:</label><textarea rows="4" id="message" onblur="endInput(this.value, this.id)"></textarea><br>
+                    <input class="cm-cancel" type="reset" value="Clear"> <input class="cm-submit" type="button" value="Send" onclick="clickSend(this.form);" id="formSend">
+                    <!-- class (cm-cancel) - this form element clears its fields -->
+                    <!-- class (cm-submit) - this form element sends the data entered into it -->
+                </form>
+
+                <section>
+                    <div class="source">Source:  <a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://en.wikipedia.org/wiki/Solar_System" target="_blank">
+                    <!-- (property="isBasedOn") - the content of the site is based on, (typeof = "WebSite") - source type - web site -->
+                        Wikipedia | Solar System</a></div>
+
+                    <br>
+                    <h2 class="p-name">External links</h2>
+                    <ul>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Solar_System" target="_blank">"Solar System" . Encyclopedia Britannica. 25 (11th ed.). 1911. pp. 157–158.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://web.archive.org/web/20140426232154/http://logic-law.com/index.php?title=A_Cosmic_History_of_Human_Evolution#Development_of_the_Solar_System" target="_blank">"A Cosmic History of the Solar System.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://joshworth.com/a-tediously-accurate-map-of-the-solar-system/" target="_blank">"A Tediously Accurate Map of the Solar System (web based scroll map scaled to the Moon being 1 pixel).</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://solarsystem.nasa.gov/" target="_blank">"NASA's Solar System Exploration.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/" target="_blank">"NASA's Solar System Profile.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://space.jpl.nasa.gov/" target="_blank">"NASA's Solar System Simulator.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://eyes.nasa.gov/apps/orrery/#/home" target="_blank">"NASA Eyes-on-the-Solar-System.</a></li>
+                        <li><a class="u-url" property="isBasedOn" typeof = "WebSite" href="https://solarsystem.nasa.gov/" target="_blank">"NASA/JPL Solar System main page.</a></li>
+                        <!-- class (u-url) - this tag contains a link to any resource or web site -->
+                    </ul>
+                </section>
+
+            </main>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="history.html">History</a>
+                <a href="table.html">Table</a>
+                <a  href="about.html" class="selected">About</a>
+            </nav>
+
+        </div>
+
+        <footer>
+            <div class="container">
+                <span id="divVsite" property="version"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="grey">Developer:</span> <span property="editor">Marsel Mirge</span>
+                <time id="divDate" datetime=""></time>
+            </div>
+        </footer>
+
+        <script src="./js/main.js"></script>
+
+    </body>
+</html>
