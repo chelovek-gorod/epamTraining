@@ -1,0 +1,67 @@
+<!DOCTYPE html>  <!-- HTML 5 -->
+
+<html lang="en-us">
+    
+    <head>
+        <meta charset="UTF-8">
+    
+        <title>Task 5 - calculator</title>
+        <meta name="description" content="Simple calculator">
+	
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+    
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <div class="main-box">
+            <div id="inputScreen">Start typing what to culc...</div>
+            <div id="resultScreen">Result screen</div>
+            <div class="controlBlock">
+                <div class="controlBlockLeft">
+                    <label onclick="btnClickRadioInt()"><input name="int-float" id="radioInt" type="radio" checked> Integers </label>
+                    <label onclick="btnClickRadioFloat()"><input name="int-float" id="radioFloat" type="radio"> Floating</label>
+                </div>
+                <div class="controlBlockRight">
+                    <label onclick="btnClickCheckPriority()"><input type="checkbox" id="checkPriority" checked> Сomputation priority</label>
+                </div>
+            </div>
+            <div class="keysBlock">
+                <div class="keysRow">
+                    <button id="btn_7" onclick="btnClick(this.innerText)">7</button>
+                    <button id="btn_8" onclick="btnClick(this.innerText)">8</button>
+                    <button id="btn_9" onclick="btnClick(this.innerText)">9</button>
+                    <button id="btn_b" class="dr" onclick="btnClick(this.innerText)"><</button>
+                    <button id="btn_r" class="dr" onclick="btnClick(this.innerText)">C</button>
+                </div>
+                <div class="keysRow">
+                    <button id="btn_4" onclick="btnClick(this.innerText)">4</button>
+                    <button id="btn_5" onclick="btnClick(this.innerText)">5</button>
+                    <button id="btn_6" onclick="btnClick(this.innerText)">6</button>
+                    <button id="btn_m" class="op" onclick="btnClick(this.innerText)">*</button>
+                    <button id="btn_d" class="op" onclick="btnClick(this.innerText)">/</button>
+                </div>
+                <div class="keysRow">
+                    <button id="btn_1" onclick="btnClick(this.innerText)">1</button>
+                    <button id="btn_2" onclick="btnClick(this.innerText)">2</button>
+                    <button id="btn_3" onclick="btnClick(this.innerText)">3</button>
+                    <button id="btn_p" class="op" onclick="btnClick(this.innerText)">+</button>
+                    <button id="btn_s" class="op" onclick="btnClick(this.innerText)">-</button>
+                </div>
+                <div class="keysRow">
+                    <button id="btn_0" class="wide" onclick="btnClick(this.innerText)">0</button>
+                    <button id="btn_d" onclick="btnClick(this.innerText)">.</button>
+                    <button id="btn_e" class="op wide" onclick="btnClick(this.innerText)">=</button>
+                </div>
+                <div class="keysRow">
+                    <button id="btn_send" class="wide" onclick="btnClick(this.innerText)">SEND</button> <span class="send"> all expressions as JSON </span>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/main.js"></script>
+
+    </body>
+</html>
