@@ -1,0 +1,52 @@
+<!DOCTYPE html>  <!-- HTML 5 -->
+
+<html lang="en-us">
+    
+    <head>
+        <meta charset="UTF-8">
+    
+        <title>Task 6 - JS Pizza</title>
+        <meta name="description" content="My pizza constructor">
+	
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+    
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <div class="main-box">
+            <h1>New pizza:</h1>
+            <div id="cheeses" class="order-line">
+                <div class="ingredient">Cheeses:</div>
+                <select id="s_cheese" onchange="changeCheese(this)" onclick="clickToLast(this)"><option selected value="0">Mozzarella</option></select>
+                <button class="add-button" id="addCheese" onclick="addCheese()">+ Cheese</button>
+            </div>
+            <div id="topping" class="order-line">
+                <div class="ingredient">Topping:</div>
+                <button class="add-button" id="addTopping" onclick="addTopping()">+ Topping</button>
+                <!--
+                <select id="s_topping" onchange="changeTopping(this)" onclick="clickToLast(this)"><option selected value="0">name</option></select>
+                -->
+            </div>
+            <div id="sauce" class="order-line">
+                <div class="ingredient">Sauces:</div>
+                <select id="s_sauce" onchange="changeSauce(this)" onclick="clickToLast(this)"><option selected value="0">Tomato</option></select>
+                <button class="add-button" id="addSauce" onclick="addSauce()">+ Sauce</button>
+            </div>
+            <div id="doughAndRim" class="order-line">
+                <div class="ingredient">Base:</div>
+                <div>Dough: <select id="s_dough" onchange="changeDough(this)"><option selected value="0">Normal</option></select></div>
+                <div class="toTop10">Rim: <select id="s_rim" onchange="changeRim(this)"><option selected value="0">Regular</option></select></div>
+            </div>
+            <div class="order-line"><span class=" total">Total price: <span id="spanPrice">0</span> $</span><br>
+                <span class="calories">(Pizza calories: <span id="spanCalories">0</span> kcal)</span>
+                <button id="orderBtn" onclick="sendOrder()">SEND ORDER</button>
+            </div>
+        </div>
+
+        <script src="./js/main.js"></script>
+
+    </body>
+</html>
