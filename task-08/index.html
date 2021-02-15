@@ -1,0 +1,36 @@
+<!DOCTYPE html>  <!-- HTML 5 -->
+
+<html lang="en-us">
+    
+    <head>
+        <meta charset="UTF-8">
+    
+        <title>Task 8 - Promise</title>
+        <meta name="description" content="Use promises in JavaScript">
+	
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+    
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <div class="container"><div class="title">Output 1 : <i>your_name_data[1].json</i></div><div id="j_1"  class="block">Waiting...</div></div>
+        <div class="container"><div class="title">Output 2 : <i>your_name_data[2].json</i></div><div id="j_2"  class="block">Waiting...</div></div>
+        <div class="container"><div class="title">Output 3 : <i>your_name_data[3].json</i></div><div id="j_3"  class="block">Waiting...</div></div>
+        <div class="container"><div class="title">AJAX request execution statuses</div><div id="a_s"  class="block log">Loading...</div></div>
+        <div class="container"><div class="title">Edit and overwrite <i>your_name_data[N].json</i></div><br>
+            Object priority:
+            <label><input type="radio" id="inp_pr_1" name="priority" onclick="changePriority(1);" checked>1 </label>
+            <label><input type="radio" id="inp_pr_2" name="priority" onclick="changePriority(2);">2 </label>
+            <label><input type="radio" id="inp_pr_3" name="priority" onclick="changePriority(3);">3 </label><br>
+            <label>Object name <input type="text" size="30" id="inp_name"></label><br><br>
+            <label>Object note <br><textarea name="comment" id="inp_note" cols="50" rows="5"></textarea></label><br>
+            <button onclick="clearFields();">clear</button><button onclick="newJSON();">overwrite</button><br>
+        </div>
+
+        <script src="./js/main.js"></script>
+
+    </body>
+</html>
