@@ -1,0 +1,23 @@
+* {font-family: 'Arial', sans-serif; margin: 0; padding: 0; user-select: none; outline: none;
+    -webkit-tap-highlight-color: rgba(87, 57, 194, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+body {width: 100%; height: 100%; margin: 0; font-size: 18px; color: #000000; background-image: url('../img/node-js-bg.png'); background-color: #99ff99;}
+
+.container {margin: 120px auto; padding: 20px; width:420px; text-align: left; border: solid 2px #e4e4e4; border-radius: 5px; background-color: #ffffffcc; box-shadow: 0px 2px 8px 4px #b9b7aa;}
+h3 {color: #333333; font-size: 26px; font-weight: 700;}
+hr {margin: 10px 0;}
+
+label {display: block; padding-bottom: 15px;}
+input {width: 400px; margin-top: 5px; padding: 5px; font-size: 16px; color: #333333; border: solid 2px #689f63; border-radius: 5px; background-color: #ffffff;}
+button {font-size: 18px; padding: 5px 0; width: 93px; margin: 10px 5px 0; color: #333333; border: solid 2px #689f63; border-radius: 5px; background-color: #99ff99;}
+button.prev {margin-left: 0;}
+button.next {margin-right: 0;}
+
+/*
+@media (max-width: 1600px) {
+
+}
+*/
