@@ -1,0 +1,7 @@
+[
+    {"id":0,"fistName":"Alex","secondName":"Dry","age":30,"speciality":"System Administrator"},
+    {"id":1,"fistName":"Bab","secondName":"Broudy","age":31,"speciality":"Game developer"},
+    {"id":2,"fistName":"Claus","secondName":"Stathem","age":32,"speciality":"Business analyst"},
+    {"id":3,"fistName":"Duglas","secondName":"Vern","age":33,"speciality":"Engineer programmer"},
+    {"id":4,"fistName":"Evelin","secondName":"Rouds","age":34,"speciality":"Software quality assurance"}
+]
